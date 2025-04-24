@@ -1,47 +1,59 @@
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
+import "../App.css";
 
 export default function Contact() {
   return (
     <div>
       <Header />
-      <main className="container mx-auto py-10">
-        <h2 className="text-4xl font-bold text-gray-800 mb-6">Get in Touch</h2>
-        <div className="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-lg">
-          <div className="mb-5">
-            <label htmlFor="name" className="block text-lg font-medium text-gray-700 mb-2">Name</label>
+      <main className="main-container">
+        <section className="contact-header">
+          <h2 className="section-title">Get in Touch</h2>
+          <p className="section-text">
+            We’d love to hear from you! Whether you have a project idea, need a quote, or just want to say hi, fill out the form below, and we’ll get back to you soon.
+          </p>
+        </section>
+        <div className="contact-form-container">
+          <div className="form-group">
+            <label htmlFor="name" className="form-label">Full Name</label>
             <input
               type="text"
               id="name"
-              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-              placeholder="Your Name"
+              className="form-input"
+              placeholder="Your Full Name"
             />
           </div>
-          <div className="mb-5">
-            <label htmlFor="email" className="block text-lg font-medium text-gray-700 mb-2">Email</label>
+          <div className="form-group">
+            <label htmlFor="email" className="form-label">Email Address</label>
             <input
               type="email"
               id="email"
-              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-              placeholder="Your Email"
+              className="form-input"
+              placeholder="Your Email Address"
             />
           </div>
-          <div className="mb-5">
-            <label htmlFor="message" className="block text-lg font-medium text-gray-700 mb-2">Message</label>
+          <div className="form-group">
+            <label htmlFor="phone" className="form-label">Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              className="form-input"
+              placeholder="Your Phone Number"
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="message" className="form-label">Your Message</label>
             <textarea
               id="message"
-              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
-              rows="5"
-              placeholder="What's good?"
+              className="form-textarea"
+              rows="6"
+              placeholder="Tell us about your project or question..."
             ></textarea>
           </div>
-          <button className="w-full bg-indigo-600 text-white py-3 rounded-lg hover:bg-indigo-700 transition">
-            Send It!
-          </button>
+          <button className="submit-button">Send Message</button>
         </div>
       </main>
       <Footer />
     </div>
   );
 }
-// export default Contact;

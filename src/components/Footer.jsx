@@ -1,9 +1,17 @@
+import "../App.css";
+
 export const Footer = () => (
-    <footer className="bg-gray-900 text-gray-300 p-4 mt-10">
-      <div className="container mx-auto text-center">
-        <p>© 2025 MC React. All Rights Reserved.</p>
-        <p>Email: yo@mc-react.com</p>
+  <footer className="footer">
+    <div className="footer-container">
+      <p className="footer-text">© 2025 MC React. All Rights Reserved.</p>
+      <p className="footer-contact">
+        Email: <a href="mailto:yo@mc-react.com" className="footer-link">yo@mc-react.com</a> | Phone: +91 98765 43210
+      </p>
+      <div className="social-links">
+        <a href="#" className="social-link">Twitter</a>
+        <a href="#" className="social-link">LinkedIn</a>
+        <a href="#" className="social-link">GitHub</a>
       </div>
-    </footer>
-  );
-export default Footer;
+    </div>
+  </footer>
+);
